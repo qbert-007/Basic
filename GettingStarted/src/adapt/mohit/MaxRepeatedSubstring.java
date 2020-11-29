@@ -39,7 +39,7 @@ public class MaxRepeatedSubstring {
 		{
 			while(sortedStr[i].equalsIgnoreCase(sortedStr[i-1])) 
 			{
-				System.out.println("in while loop");
+				//System.out.println("in while loop");
 				count++;
 				i++;
 				if(i==sortedStr.length)
