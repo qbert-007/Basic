@@ -1,3 +1,3 @@
 # Basic
 ----------------------------------------------
-Solution(in JAVA) of some basic coding-programs usually asked in placement drives.
+Solution(in JAVA) of some basic coding-problems usually asked in placement drives.
