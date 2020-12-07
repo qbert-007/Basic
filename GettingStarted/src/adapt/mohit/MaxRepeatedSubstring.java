@@ -13,7 +13,7 @@ public class MaxRepeatedSubstring {
 			public int compare(String s1, String s2) {
 				if(s1.length()==s2.length()) 
 				{
-					return s1.compareTo(s2);
+					return -1*(s1.compareTo(s2));
 				}
 				if(s1.length()>s2.length()) 
 				{
@@ -33,10 +33,11 @@ public class MaxRepeatedSubstring {
 		String[] strArr = str.split(" ");
 		String[] sortedStr=sortDescString(strArr);
 		String maxStr=sortedStr[0];
-		int count=1;
+		
 		int max=0;
 		for(int i=1;i<sortedStr.length;i++) 
 		{
+			int count=1;
 			while(sortedStr[i].equalsIgnoreCase(sortedStr[i-1])) 
 			{
 				//System.out.println("in while loop");
