@@ -16,26 +16,32 @@ public class PrimeMaxSubstring
 	}
 	public static void main(String[] args) 
 	{
-		//System.out.println(isPrime(93));
 		Scanner sc=new Scanner(System.in);
 		String input=sc.next();
 		sc.close();
 		//1245=1245,124,245,12,24,45,1,2,4,5
 		int len=input.length();
 		int k=len;
+		int max=-1;
 		while(k>0) {
-			int beginIndex=0;
-			int endIndex=beginIndex+k;
+			int beginIndex=0;//inclusive
+			int endIndex=beginIndex+k;//exclusive
 			for(beginIndex=0;endIndex<=len;beginIndex++) {
 				String check=input.substring(beginIndex, endIndex);
-				if(isPrime(Integer.parseInt(check))) {
-					System.out.println("Greatest prime no is "+check);
-					return;
+				int num;
+				if(isPrime(num=Integer.parseInt(check))) {
+				    if(max<num){
+				        max=num;
+				    }
 				}
 				endIndex++;
 			}
+			if(max!=-1) {
+			  System.out.println("Greatest prime no. is "+max);
+			  return;
+			} 
 			k--;
 		}
-		System.out.println("Greatest prime no is "+1);	
+		System.out.println("No prime no.");	
 	}
 }
